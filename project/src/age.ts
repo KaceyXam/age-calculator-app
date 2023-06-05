@@ -10,11 +10,13 @@ export function calculateAge(
 	birthYear: number
 ) {
 	const current = new Date();
+	console.log(birthDay, birthMonth, birthYear);
 	let newDay = current.getDate() - birthDay;
 	let newMonth = current.getMonth() + 1 - birthMonth;
 	let newYear = current.getFullYear() - birthYear;
+	console.log(newDay, newMonth, newYear);
 	if (newDay < 0) {
-		newDay += 30;
+		newDay *= -1;
 		newMonth -= 1;
 	}
 	if (newMonth < 0) {

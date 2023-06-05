@@ -1,0 +1,66 @@
+.input-row {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1em;
+	padding-bottom: 1.5em;
+	border-bottom: solid 2px var(--light-grey);
+}
+
+.input-wrapper {
+	display: grid;
+	align-self: flex-start;
+	max-width: 100%;
+	--border-color: var(--grey);
+}
+
+.input-wrapper:has(.error) {
+	--border-color: var(--error-red);
+}
+
+.input-wrapper label {
+	text-transform: uppercase;
+	font-size: 0.6em;
+	font-weight: 700;
+	color: var(--border-color);
+}
+
+.input-wrapper input {
+	max-width: 4.75rem;
+	padding: 0.25em 0.75em;
+	border-radius: 0.25em;
+	border: var(--border-color) 1px solid;
+	font-weight: 700;
+}
+
+.input-wrapper input:focus {
+	outline-color: var(--main-purple);
+	outline: var(--main-purple) solid 1px;
+}
+
+.submit-btn {
+	position: relative;
+	align-self: center;
+	justify-self: end;
+	background-color: var(--main-purple);
+	border-radius: 999vmax;
+	border: none;
+	display: grid;
+	place-content: center;
+	aspect-ratio: 1 / 1;
+	width: fit-content;
+	padding: 0.75em;
+	/* This works I guess */
+	bottom: calc(-100% + 0.5rem);
+	transition: background 75ms ease-in-out;
+}
+
+.submit-btn:hover {
+	background-color: var(--black);
+}
+
+.error {
+	font-size: 0.4em;
+	color: var(--error-red);
+	font-style: italic;
+}

@@ -1,13 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,800&display=swap");
+
+:root {
+	--white: hsl(0, 0%, 100%);
+	--off-white: hsl(0, 0%, 94%);
+	--light-grey: hsl(0, 0%, 86%);
+	--grey: hsl(0, 1%, 44%);
+	--black: hsl(0, 0%, 8%);
+
+	--main-purple: hsl(259, 100%, 65%);
+	--error-red: hsl(0, 100%, 67%);
+
+	font-size: 32px;
+}
+
+/* css reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+/* end css reset */
+
+/* Remove arrows from input boxes */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	min-height: 100vh;
+	display: grid;
+	place-content: center;
+	background: var(--off-white);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+.age-wrapper {
+	display: grid;
+	background-color: var(--white);
+	padding: 1em;
+	box-shadow: 0 0 0.5em var(--light-grey);
+	border-radius: 1em 1em 6em 1em;
+}
+
+.age-title {
+	font-size: 2.5rem;
+	font-weight: 800;
+	font-style: italic;
+}
+
+.age-title span {
+	color: var(--main-purple);
 }
