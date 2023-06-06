@@ -7,6 +7,15 @@
 	border-bottom: solid 2px var(--light-grey);
 }
 
+.input-row::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	top: 75%;
+	height: 2px;
+	background-color: var(--light-grey);
+}
+
 .input-wrapper {
 	display: grid;
 	align-self: flex-start;
@@ -63,4 +72,28 @@
 	font-size: 0.4em;
 	color: var(--error-red);
 	font-style: italic;
+}
+
+@media (max-width: 900px) {
+	.input-row {
+		grid-template-columns: repeat(3, 1fr);
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+
+	.input-row::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		top: 75%;
+		height: 2px;
+		background-color: var(--light-grey);
+	}
+
+	.submit-btn {
+		grid-column: 1 / -1;
+		width: 3rem;
+		justify-self: center;
+		bottom: 0;
+	}
 }

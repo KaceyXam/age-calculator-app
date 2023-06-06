@@ -91,3 +91,15 @@ code {
 .age-title span {
 	color: var(--main-purple);
 }
+
+@media (max-width: 900px) {
+	:root {
+		font-size: 18px;
+	}
+
+	body {
+		align-content: start;
+		margin-top: 4rem;
+		padding-inline: 1rem;
+	}
+}
